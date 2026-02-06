@@ -1,134 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <div class="page-header">
-  <h1 style="font-family: Cambria";font-size=100px>Printed T-Shirts Collection</h1>
-  <a href="index.html" class="back-link">← Back to Home</a>
-</div>
+  <title>Printed T-Shirts - Arambh</title>
 
-<title>Printed T-Shirts - Arambh</title>
-<style>
-body { font-family: Arial; padding: 20px; background:linear-gradient(150deg,#f4a896,#358597);}
-.products { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:10px; border-radius:10px; box-shadow:0 5px 10px rgba(0,0,0,0.1); }
-.card img { width:100%; border-radius:10px; }
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: linear-gradient(150deg, #f4a896, #358597);
+    }
 
-.img-bg {
-  background: linear-gradient(135deg, #f51810, #9000f8, #2c5364);
-  padding: 20px;
-  border-radius: 15px;
-}
+    /* HEADER */
+    .page-header {
+      background: #2388b8;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
 
-.img-bg img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: transparent;
-}
-.product-card {
-  width: 250px;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .page-header h1 {
+      font-family: Cambria;
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
 
-.product-card img {
-  width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
-}
+    .back-link {
+      color: purple;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-}
+    .back-link:hover {
+      text-decoration: underline;
+    }
 
-.product-card:hover img {
-  transform: scale(1.1);
-}
+    /* PRODUCTS GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-  /*button*/
-  .order-btn-premium {
-  display: inline-block;
-  padding: 14px 36px;
-  background: linear-gradient(135deg, #000, #444);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 17px;
-  font-weight: 600;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
+    .img-bg {
+      background: linear-gradient(135deg, #f51810, #9000f8, #2c5364);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.order-btn-premium:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
-}
-/*header*/
-.page-header {
-  background: #2388b8;   /* your blue color */
-  padding: 40px 20px;
-  text-align: center;
-}
+    .img-bg:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
 
-.page-header h1 {
-  margin-bottom: 10px;
-}
+    video {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
 
-.back-link {
-  color: purple;
-  text-decoration: none;
-  font-size: 16px;
-}
+    /* SIZE CHART */
+    .product-card {
+      max-width: 300px;
+      margin: 40px auto;
+      background: white;
+      padding: 15px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
-.back-link:hover {
-  text-decoration: underline;
-}
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
 
+    /* ORDER BUTTON */
+    .order-btn-premium {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 14px 36px;
+      background: linear-gradient(135deg, #000, #444);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
 
-</style>
+    .order-btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="products">
-  <div class="img-bg">
-    <video autoplay muted loop playsinline width="300", height="500">
-        <source src="printed1.mp4">
-    </video>
-    <h3>Printed Shirt 1</h3>
-    <p>₹349</p>
+  <div class="page-header">
+    <h1>Printed T-Shirts Collection</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
   </div>
-  <div class="img-bg">
-   <video autoplay muted loop playsinline width="300", height="500">
-        <source src="printed2.mp4">
-    </video>
-    <h3>Printed Shirt 2</h3>
-    <p>₹349</p>
-  </div>
+
+  <div class="products">
     <div class="img-bg">
-    <video autoplay muted loop playsinline width="300", height="500">
-        <source src="printed3.mp4">
-    </video>
-    <h3>Printed Shirt 3</h3>
-    <p>₹349</p>
+      <video autoplay muted loop playsinline>
+        <source src="printed1.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 1</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+      <video autoplay muted loop playsinline>
+        <source src="printed2.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 2</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+      <video autoplay muted loop playsinline>
+        <source src="printed3.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 3</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+      <video autoplay muted loop playsinline>
+        <source src="printed4.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 4</h3>
+      <p>₹349</p>
+    </div>
   </div>
-  <div class="img-bg">
-   <video autoplay muted loop playsinline width="300", height="500">
-        <source src="printed4.mp4">
-    </video>
-    <h3>Printed Shirt 4</h3>
-    <p>₹349</p>
+
+  <hr>
+
+  <div class="product-card">
+    <img src="sizechart.jpg" alt="Size Chart">
+    <h3>Please check the size chart</h3>
   </div>
-</div>
-<br><hr>
-  <div class="product-card" >
-  <img src="sizechart.jpg" width="400px">
-  <h3> Please check this size</h3>
-  </div>
-<a href="https://forms.gle/g4AaQk4dXQy3acXM6" target="_blank" class="order-btn-premium">
-  🛒 Order Now
-</a>
+
+  <a href="https://forms.gle/g4AaQk4dXQy3acXM6" target="_blank" class="order-btn-premium">
+    🛒 Order Now
+  </a>
+
 </body>
 </html>
