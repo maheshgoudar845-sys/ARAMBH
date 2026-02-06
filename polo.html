@@ -1,99 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Polo T-Shirts - Arambh</title>
-<style>
-body { font-family: Arial; padding: 20px; background:#f8f8f8; }
-.products { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:10px; border-radius:10px; box-shadow:0 5px 10px rgba(0,0,0,0.1); }
-.card img { width:100%; border-radius:10px; }
-  .img-bg {
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  padding: 20px;
-  border-radius: 15px;
-}
+  <title>Printed T-Shirts - Arambh</title>
 
-.img-bg img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: transparent;
-}
-  .product-card:hover .img-bg {
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  transform: scale(1.03);
-  transition: 0.3s ease;
-  
-  .order-btn-premium {
-  display: inline-block;
-  padding: 14px 36px;
-  background: linear-gradient(135deg, #000, #444);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 17px;
-  font-weight: 600;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: linear-gradient(150deg, #f4a896, #358597);
+    }
 
-.order-btn-premium:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
-}
-</style>
+    /* HEADER */
+    .page-header {
+      background: #2388b8;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-family: Cambria;
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      color: purple;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* PRODUCTS GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .img-bg {
+      background: linear-gradient(135deg, #f51810, #9000f8, #2c5364);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-bg:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    video {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    /* SIZE CHART */
+    .product-card {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 15px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* ORDER BUTTON */
+    .order-btn-premium {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 14px 36px;
+      background: linear-gradient(135deg, #000, #444);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .order-btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Polo T-Shirts Collection</h1>
-<a href="index.html">⬅ Back to Home</a>
+  <div class="page-header">
+    <h1>Printed T-Shirts Collection</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
 
-<div class="products">
-  <div class="card">
-    <img src="polo1.jpg">
-    <h3>Grey Polo Shirt </h3>
-    <p>₹349</p>
+  <div class="products">
+    <div class="img-bg">
+      <video autoplay muted loop playsinline>
+        <source src="printed1.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 1</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+      <video autoplay muted loop playsinline>
+        <source src="printed2.mp4" type="video/mp4">
+      </video>
+      <h3>Printed Shirt 2</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+<img src="polo3.jpg">
+      <h3>Polo 3</h3>
+      <p>₹349</p>
+    </div>
+
+    <div class="img-bg">
+<img src="polo4.jpg">
+      <h3>Polo 4</h3>
+      <h3>Printed Shirt 4</h3>
+      <p>₹349</p>
+    </div>
   </div>
-  <div class="card">
-    <img src="polo2.jpg">
-    <h3>Beach Polo Shirt</h3>
-    <p>₹349</p>
+
+  <hr>
+
+  <div class="product-card">
+    <img src="sizechart.jpg" alt="Size Chart">
+    <h3>Please check the size chart</h3>
   </div>
-    <div class="card">
-    <img src="polo3.jpg">
-    <h3>Polo Shirt</h3>
-    <p>₹349</p>
-    </div>  
-  </div>
-<br><hr>
-<div class="products">
-  <div class="card">
-    <img src="polo4.jpg">
-    <h3>Grey Polo Shirt </h3>
-    <p>₹349</p>
-  </div>
-  <div class="card">
-    <img src="Polo5.jpg">
-    <h3>Beach Polo Shirt</h3>
-    <p>₹349</p>
-  </div>
-    <div class="card">
-    <img src="Polo6.jpg">
-    <h3>Polo Shirt</h3>
-    <p>₹349</p>
-  </div>
-</div>
-<br><hr>
-  <div class="product-card" >
-  <img src="sizechart.jpg" width="400px">
-  <h3> Please check this size</h3>
-  </div>
-  <a href="https://forms.gle/g4AaQk4dXQy3acXM6" target="_blank">
-  <button>Place Order</button>
-</a>
+
+  <a href="https://forms.gle/g4AaQk4dXQy3acXM6" target="_blank" class="order-btn-premium">
+    🛒 Order Now
+  </a>
 
 </body>
 </html>
-
-
