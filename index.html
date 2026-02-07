@@ -49,27 +49,53 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  height: 80vh;
+  position: relative;
+  height: 65vh; /* reduced height */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background: radial-gradient(circle at top, #2c5364, #0f2027);
 }
 
-.hero-content h2 {
-  font-size: 22px;
-  letter-spacing: 3px;
-  margin-top: 10px;
-  opacity: 0.9;
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.75)
+  );
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
 }
 
 .brand-logo {
-  width: 260px;
-  max-width: 80%;
+  width: 240px;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 25px rgba(255,255,255,0.45));
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.5));
 }
+
+.hero-content h2 {
+  font-size: 26px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
 
 /* SECTION */
 .section {
@@ -170,11 +196,18 @@ footer p {
 </header>
 
 <section class="hero" id="home">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero-promo.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <img src="Logo.jpg" class="brand-logo" alt="Arambh Logo">
-    <h2>WHERE STYLE BEGINS</h2>
+    <h2>WEAR IT. STYLE IT.</h2>
   </div>
 </section>
+
 
 <section class="section" id="products">
   <h2>Our Collection</h2>
@@ -226,3 +259,4 @@ footer p {
 
 </body>
 </html>
+
