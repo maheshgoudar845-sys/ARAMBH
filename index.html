@@ -1,183 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arambh - Clothing Store</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #f8f8f8; color: #333; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arambh - Clothing Store</title>
 
-    /* Header */
-    header {
-      background: #000;
-      color: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 { font-size: 24px; letter-spacing: 2px; }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 70vh;
-      background: url('YOUR_HERO_IMAGE.jpg') center/cover no-repeat; /* 🔥 PUT HERO IMAGE HERE */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-    .brand-logo {
-  width: 1250px;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h2 { font-size: 48px; margin-bottom: 10px; }
-    .hero p { font-size: 18px; }
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f5f5f5;
+}
 
-    /* Products Section */
-    .section { padding: 50px 30px; }
-    .section h2 { text-align: center; margin-bottom: 30px; font-size: 32px; }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .product-card {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .product-card:hover { transform: translateY(-5px); }
-    .product-card img {
-      width: 100%;
-      border-radius: 10px;
-      height: 500px;
-      object-fit: cover;
-    }
-    .product-card h3 { margin: 10px 0; }
-    .product-card p { font-size: 14px; color: #666; }
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.8);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
 
-    /* Video Section */
-    .video-section {
-      background: #111;
-      color: white;
-      padding: 50px 30px;
-      text-align: center;
-    }
-    video { width: 80%; border-radius: 10px; max-width: 900px; }
+header h1 {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
 
-    /* Footer */
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    footer p { font-size: 14px; }
-  </style>
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #2c5364, #0f2027);
+}
+
+.hero-content h2 {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.brand-logo {
+  width: 260px;
+  max-width: 80%;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.45));
+}
+
+/* SECTION */
+.section {
+  padding: 60px 30px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  color: #111;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.product-card img,
+.product-card video {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  background: #0b0b0b;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.video-section h2 {
+  margin-bottom: 30px;
+}
+
+.video-section video {
+  width: 45%;
+  max-width: 500px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>ARAMBH</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#video">Showcase</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>ARAMBH</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#video">Showcase</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-<div class="hero-content">
-  <img src="Logo.jpg" class="brand-logo" alt="Arambh Logo">
-  <h2>Where Style Begins</h2>
-</div>
-
-  </section>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <img src="Logo.jpg" class="brand-logo" alt="Arambh Logo">
+    <h2>WHERE STYLE BEGINS</h2>
+  </div>
+</section>
 
 <section class="section" id="products">
   <h2>Our Collection</h2>
-<hr>
+
   <div class="products">
 
-    <!-- POLO T-SHIRTS -->
-    <a href="polo.html" class="product-card" >
-      <img src="polo1.jpg" alt="Polo T-Shirts"> <!-- PUT POLO IMAGE -->
+    <a href="polo.html" class="product-card">
+      <img src="polo1.jpg" alt="Polo T-Shirts">
       <h3>Polo T-Shirts</h3>
-      <p>Premium formal & casual polo collection</p>
+      <p>Premium formal & casual polos</p>
     </a>
 
-    <!-- PRINTED T-SHIRTS -->
     <a href="printed.html" class="product-card">
-    <video autoplay muted loop playsinline width="260", height="500">
-      <source src="printed2.mp4"> </video>
+      <video autoplay muted loop playsinline>
+        <source src="printed2.mp4" type="video/mp4">
+      </video>
       <h3>Printed T-Shirts</h3>
-   
-      <p>Trendy graphic printed designs</p>
+      <p>Trendy graphic street designs</p>
     </a>
 
-    <!-- OVERSIZED & HOODIES -->
     <a href="oversized.html" class="product-card">
-      <img src="oversized1.jpg" alt="Oversized & Hoodies"> <!-- PUT IMAGE -->
+      <img src="oversized1.jpg" alt="Oversized & Hoodies">
       <h3>Oversized & Hoodies</h3>
-      <p>Streetwear oversized and hoodies</p>
+      <p>Streetwear oversized collection</p>
     </a>
 
   </div>
 </section>
- <!-- VIDEO SHOWCASE SECTION -->
+
 <section class="video-section" id="video">
-  <h2>Product Showcase Videos</h2>
+  <h2>Product Showcase</h2>
 
-  <div style="gap:20px;">
-    <video autoplay controls width="500px", height="400px">
-      <source src="T-shirt Promotion Instagram Post_20251211_130637_0000.mp4" >
-    </video>
-    <video autoplay controls width="500px", height="400px">
-      <source src="Black and Green Modern T-Shirt Fashion Instagram Post_20251204_122818_0000.mp4">
-    </video>
+  <video autoplay muted loop controls>
+    <source src="T-shirt Promotion Instagram Post_20251211_130637_0000.mp4">
+  </video>
 
-  </div>
+  <video autoplay muted loop controls>
+    <source src="Black and Green Modern T-Shirt Fashion Instagram Post_20251204_122818_0000.mp4">
+  </video>
 </section>
 
-  <!-- FOOTER WITH YOUR DETAILS -->
-  <footer id="contact">
-    <p><b>Owner:</b> Mahesh Goudar</p>
-    <p><b>Store Name:</b> Arambh Clothing</p>
-    <p><b>Email:</b> maheshsimply099@gmail.com</p> 
-    <p><b>Phone:</b> +91-9637748622</p> 
-    <p> &copy; 2026 Arambh. All Rights Reserved.</p>
-  </footer>
+<footer id="contact">
+  <p><b>Owner:</b> Mahesh Goudar</p>
+  <p><b>Brand:</b> Arambh Clothing</p>
+  <p><b>Email:</b> maheshsimply099@gmail.com</p>
+  <p><b>Phone:</b> +91-9637748622</p>
+  <p>© 2026 Arambh. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
