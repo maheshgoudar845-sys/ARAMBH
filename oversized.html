@@ -1,26 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Oversized & Hoodies - Arambh</title>
-<style>
-body { font-family: Arial; padding: 20px; background:#1f84ba; }
-.products { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:10px; border-radius:10px; box-shadow:0 5px 10px rgba(0,0,0,0.1); }
-.card img { width:100%; border-radius:10px;
-}
-.img-bg {
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  padding: 20px;
-  border-radius: 15px;
-}
+  <title>Oversized T-Shirts - Arambh</title>
 
-.img-bg img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: transparent;
-}
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: linear-gradient(150deg, #f4a896, #358597);
+    }
+
+    /* HEADER */
+    .page-header {
+      background: #2388b8;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-family: Cambria;
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      color: purple;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* PRODUCTS GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* PRODUCT CARD */
+    .img-bg {
+      background: linear-gradient(135deg, #f51810, #9000f8, #2c5364);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-bg:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    /* IMAGE FIX (IMPORTANT PART) */
+    .img-bg img {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    .img-bg:hover img {
+      transform: scale(1.05);
+    }
+
+    /* SIZE CHART */
+    .product-card {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 15px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
     /* ORDER BUTTON */
     .order-btn-premium {
       display: block;
@@ -41,71 +107,63 @@ body { font-family: Arial; padding: 20px; background:#1f84ba; }
       transform: translateY(-3px);
       box-shadow: 0 15px 25px rgba(0,0,0,0.4);
     }
-
-  }
-</style>
+  </style>
 </head>
+
 <body>
 
-<h1>Oversized T-Shirts & Hoodies</h1>
-<a href="index.html">⬅ Back to Home</a>
+  <div class="page-header">
+    <h1>Oversized T-Shirts Collection</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
 
-<div class="products">
-  <div class="img-bg">
-    <img src="oversized1.jpg" >
-    <h3>Oversized T-Shirt</h3>
-    <p>₹299</p>
-  </div>
-  <div class="img-bg">
-    <img src="oversized2.jpg" >
-    <h3>Oversized T-Shirt</h3>
-    <p>₹299</p>
-  </div>
-  <div class="img-bg">
-    <img src="oversized3.png">
-    <h3>Hoodie</h3>
-    <p>₹299</p>
-  </div>
-</div>
-<br><hr>
-<div class="products">
-  <div class="img-bg">
-    <img src="oversized4.png">
-    <h3>Hoodie</h3>
-    <p>₹299</p>
-  </div>
+  <div class="products">
     <div class="img-bg">
-    <img src="hoodie2.jpg">
-    <h3>Hoodie</h3>
-    <p>₹599</p>
+      <img src="oversized1.jpg" alt="Grayish Green Polo">
+      <h3>Light Blue</h3>
+      <p>₹329</p>
+      <p>310 GSM</p>
+    </div>
+
+    <div class="img-bg">
+      <img src="oversized2.jpg" alt="Cream Polo">
+      <h3>Dark Blue</h3>
+      <p>₹329</p>
+      <p>310 GSM</p>
+    </div>
+
+    <div class="img-bg">
+      <img src="oversized3.jpg" alt="Beige Polo">
+      <h3>Beige</h3>
+      <p>₹349</p>
+      <p>310 GSM</p>
+    </div>
+
+    <div class="img-bg">
+      <img src="oversized4.jpg" alt="Black Polo">
+      <h3>White</h3>
+      <p>₹349</p>
+      <p>310 GSM</p>
+    </div>
+
+    <div class="img-bg">
+      <img src="Polo5.jpg" alt="Blue Polo">
+      <h3>Blue</h3>
+      <p>₹349</p>
+      <p>310 GSM</p>
+    </div>
   </div>
-   <div class="img-bg">
-    <img src="hoodie1.jpg">
-    <h3>Hoodie</h3>
-    <p>₹599</p>
+
+  <hr>
+
+  <div class="product-card">
+    <img src="sizechart.jpg" alt="Size Chart">
+    <h3>Please check the size chart</h3>
   </div>
-</div>
-<br><hr>
-  <div class="product-card" >
-  <img src="sizechart.jpg" width="400px">
-  <h3> Please check this size</h3>
-  </div>
+
   <a href="https://forms.gle/g4AaQk4dXQy3acXM6" target="_blank" class="order-btn-premium">
     🛒 Order Now
   </a>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
